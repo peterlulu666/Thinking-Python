@@ -1,0 +1,455 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Function · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Variable and data type.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="The Way of Programming.html">
+            
+                <a href="The Way of Programming.html">
+            
+                    
+                    The Way of Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Variable and data type.html">
+            
+                <a href="Variable and data type.html">
+            
+                    
+                    Variable and data type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Function</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="function">Function</h1>
+<h2 id="function-call">Function call</h2>
+<p>A function is a named sequence of statement that performs a computation.        </p>
+<p><code>type(96)</code>
+output: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span></code></p>
+<p><code>int(&apos;96&apos;)</code><br>output: <code>96</code></p>
+<p><code>int(9.6)</code><br>output: <code>9</code>      </p>
+<p><code>float(96)</code>
+output: <code>96.0</code></p>
+<p><code>float(&apos;9.6&apos;)</code><br>output: <code>9.6</code>      </p>
+<p><code>str(96)</code>
+output: <code>&apos;96&apos;</code>      </p>
+<p><br>        </p>
+<h2 id="math-function">Math function</h2>
+<p><code>import math</code>      </p>
+<p><code>math.pi</code>     </p>
+<h2 id="composition">Composition</h2>
+<p>Programming languages have ability to take small building blocks and compose them.       </p>
+<h2 id="adding-new-function">Adding new function</h2>
+<p>We would be able to add new function.        </p>
+<p><code>def</code> is the keyword that allow us to define a function.      </p>
+<p>The arguments would be in the parentheses.      </p>
+<p>The syntax for calling a function is the same as for built-in function.     </p>
+<p>We would use a function inside a function.      </p>
+<h2 id="variables-and-parameters-are-local">variables and parameters are local</h2>
+<p>They can only exist inside the function.        </p>
+<h2 id="fruit-function-and-void-function">Fruit function and void function</h2>
+<p>Fruitful function returns a value.      </p>
+<p>Void function does not return a value.        </p>
+<h2 id="why-function">Why function</h2>
+<p>Reusability, efficiency and collaboration.        </p>
+<h2 id="floor-division">Floor division</h2>
+<p><code>105 / 60</code><br>output: <code>1.75</code>      </p>
+<p><code>105 // 60</code><br>output: <code>1</code>      </p>
+<h2 id="programming">Programming</h2>
+<pre class="language-"><code class="lang-python">A <span class="token operator">=</span> <span class="token number">1</span>
+B <span class="token operator">=</span> <span class="token number">2</span>
+C <span class="token operator">=</span> <span class="token number">3</span>
+D <span class="token operator">=</span> <span class="token number">4</span>
+totalScore <span class="token operator">=</span> <span class="token number">0</span>
+character <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+
+
+<span class="token keyword">def</span> <span class="token function">QuizScore</span><span class="token punctuation">(</span>choice<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> totalScore
+    <span class="token keyword">if</span> choice <span class="token operator">==</span> <span class="token string">&apos;A&apos;</span> <span class="token keyword">or</span> choice <span class="token operator">==</span> <span class="token string">&apos;a&apos;</span><span class="token punctuation">:</span>
+        totalScore <span class="token operator">+=</span> A
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">&apos;B&apos;</span> <span class="token keyword">or</span> choice <span class="token operator">==</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">:</span>
+        totalScore <span class="token operator">+=</span> B
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">&apos;C&apos;</span> <span class="token keyword">or</span> choice <span class="token operator">==</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">:</span>
+        totalScore <span class="token operator">+=</span> C
+    <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token string">&apos;D&apos;</span> <span class="token keyword">or</span> choice <span class="token operator">==</span> <span class="token string">&apos;d&apos;</span><span class="token punctuation">:</span>
+        totalScore <span class="token operator">+=</span> D
+
+
+<span class="token keyword">def</span> <span class="token function">QuestionOneDisplay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You&apos;re in a burning building with a friend and &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;have 10 seconds to get out. &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;What do you do? \n&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;A - Save myself, of course! \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;B - Stay and save my friend. \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;C - If I can save my friend I&apos;ll try but if they&apos;re going to die anyway, what&apos;s the point? \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;D - Save my friend and everyone else I can find. \n&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">QuestionTwoDisplay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You&apos;re in a burning building with a friend and &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;have 10 seconds to get out. &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;What do you do? \n&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;A - Save myself, of course! \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;B - Stay and save my friend. \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;C - If I can save my friend I&apos;ll try but if they&apos;re going to die anyway, what&apos;s the point? \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;D - Save my friend and everyone else I can find. \n&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">QuestionThreeDisplay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You&apos;re in a burning building with a friend and &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;have 10 seconds to get out. &quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;What do you do? \n&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;A - Save myself, of course! \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;B - Stay and save my friend. \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;C - If I can save my friend I&apos;ll try but if they&apos;re going to die anyway, what&apos;s the point? \n&quot;</span> <span class="token operator">+</span>
+          <span class="token string">&quot;D - Save my friend and everyone else I can find. \n&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">YourCharacter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> character
+    <span class="token keyword">global</span> totalScore
+    <span class="token keyword">if</span> totalScore <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        character <span class="token operator">=</span> <span class="token string">&quot;Slytherin!!!&quot;</span>
+    <span class="token keyword">elif</span> totalScore <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">:</span>
+        character <span class="token operator">=</span> <span class="token string">&quot;Gryffindor!!!&quot;</span>
+    <span class="token keyword">elif</span> totalScore <span class="token operator">&lt;</span> <span class="token number">11</span><span class="token punctuation">:</span>
+        character <span class="token operator">=</span> <span class="token string">&quot;Ravenclaw!!!&quot;</span>
+    <span class="token keyword">elif</span> totalScore <span class="token operator">&lt;</span> <span class="token number">13</span><span class="token punctuation">:</span>
+        character <span class="token operator">=</span> <span class="token string">&quot;Hufflepuff!!!&quot;</span>
+
+
+<span class="token keyword">def</span> <span class="token function">Report</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> totalScore
+    <span class="token keyword">global</span> character
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You scored &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalScore<span class="token punctuation">)</span> <span class="token operator">+</span>
+          <span class="token string">&quot; on the quiz, that means you are...&quot;</span> <span class="token operator">+</span>
+          character<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    QuestionOneDisplay<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    questionOne <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your selection now \n&quot;</span><span class="token punctuation">)</span>
+    QuizScore<span class="token punctuation">(</span>questionOne<span class="token punctuation">)</span>
+
+    QuestionTwoDisplay<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    questionTwo <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your selection now \n&quot;</span><span class="token punctuation">)</span>
+    QuizScore<span class="token punctuation">(</span>questionTwo<span class="token punctuation">)</span>
+
+    QuestionThreeDisplay<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    questionThree <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your selection now \n&quot;</span><span class="token punctuation">)</span>
+    QuizScore<span class="token punctuation">(</span>questionThree<span class="token punctuation">)</span>
+
+    YourCharacter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    Report<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Variable and data type.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Variable and data type">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.4","depth":1,"previous":{"title":"Variable and data type","level":"1.3","depth":1,"path":"Variable and data type.md","ref":"Variable and data type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2019-10-10T15:52:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-10T19:07:36.684Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
