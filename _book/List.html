@@ -249,13 +249,24 @@
 <pre class="language-"><code class="lang-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 b <span class="token operator">=</span> a
 </code></pre>
-<p>The list <code>a</code> and <code>b</code> is referencing to the same address of memory. If you modify <code>a</code>, you are changing <code>b</code>.</p>
+<blockquote>
+<p><strong>[info] List</strong></p>
+<ul>
+<li>The list <code>a</code> and <code>b</code> is referencing to the same address of memory.</li>
+<li>If you modify <code>a</code>, you are changing <code>b</code>.</li>
+</ul>
+</blockquote>
 <pre class="language-"><code class="lang-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> item <span class="token keyword">in</span> a<span class="token punctuation">:</span>
     b<span class="token punctuation">.</span>append<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
 </code></pre>
-<p>The list <code>a</code> and <code>b</code> is referencing to the different address of memory.</p>
+<blockquote>
+<p><strong>[info] List</strong></p>
+<ul>
+<li>The list <code>a</code> and <code>b</code> is referencing to the different address of memory.</li>
+</ul>
+</blockquote>
 <h2 id="programming">Programming</h2>
 <p></p><p class="code-label">Typing.py</p><p></p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">import</span> time
@@ -444,7 +455,7 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-12T19:09:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-12T22:56:56.566Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-12T23:04:08.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-12T23:04:18.675Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
