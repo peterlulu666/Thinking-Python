@@ -423,6 +423,66 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
 
     <span class="token keyword">return</span> errors
 </code></pre>
+<p></p><p class="code-label">Pig.py</p><p></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+<span class="token keyword">import</span> sys
+
+
+<span class="token keyword">def</span> <span class="token function">Pig</span><span class="token punctuation">(</span>totalNumber<span class="token punctuation">,</span> totalPoints<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># PlayerOne enter R or H</span>
+        userChoose <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your choice \n&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> userChoose <span class="token operator">==</span> <span class="token string">&quot;H&quot;</span> <span class="token keyword">or</span> userChoose <span class="token operator">==</span> <span class="token string">&quot;h&quot;</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+        <span class="token comment"># Random number</span>
+        number <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You rolled a &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># Total points in this round</span>
+        totalNumber <span class="token operator">=</span> totalNumber <span class="token operator">+</span> number
+        <span class="token comment"># Total points in all rounds</span>
+        totalPoints <span class="token operator">=</span> totalPoints <span class="token operator">+</span> number
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Points in this round: &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalNumber<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Your total is &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalPoints<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> totalNumber <span class="token operator">&gt;</span> <span class="token number">20</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+        <span class="token keyword">if</span> totalPoints <span class="token operator">&gt;</span> <span class="token number">20</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+
+    <span class="token keyword">return</span> totalNumber
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Initialize total points</span>
+    totalPointOne <span class="token operator">=</span> <span class="token number">0</span>
+    totalPointTwo <span class="token operator">=</span> <span class="token number">0</span>
+    currentNumber <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># PlayerOne start to play, choose R or H</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;It is your turn, PlayerOne \n&quot;</span> <span class="token operator">+</span>
+              <span class="token string">&quot;R - Roll \n&quot;</span> <span class="token operator">+</span>
+              <span class="token string">&quot;H - Hold \n&quot;</span><span class="token punctuation">)</span>
+
+        totalPointOne <span class="token operator">=</span> Pig<span class="token punctuation">(</span>currentNumber<span class="token punctuation">,</span> totalPointOne<span class="token punctuation">)</span> <span class="token operator">+</span> totalPointOne
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You choose hold and your total is &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalPointOne<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> totalPointOne <span class="token operator">&gt;=</span> <span class="token number">20</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Player one wins &quot;</span><span class="token punctuation">)</span>
+            sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> totalPointOne <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;It is your turn, PlayerTwo \n&quot;</span> <span class="token operator">+</span>
+                  <span class="token string">&quot;R - Roll \n&quot;</span> <span class="token operator">+</span>
+                  <span class="token string">&quot;H - Hold \n&quot;</span><span class="token punctuation">)</span>
+
+            totalPointTwo <span class="token operator">=</span> Pig<span class="token punctuation">(</span>currentNumber<span class="token punctuation">,</span> totalPointTwo<span class="token punctuation">)</span> <span class="token operator">+</span> totalPointTwo
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You choose hold and your total is &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalPointTwo<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> totalPointTwo <span class="token operator">&gt;=</span> <span class="token number">20</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Player two wins &quot;</span><span class="token punctuation">)</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 <p><br></p>
 <h2 id="java-programming">Java Programming</h2>
 <p></p><p class="code-label">Typing.java</p><p></p>
@@ -539,6 +599,7 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
 
 
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">selectSentence</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">//      Random string from string array</span>
         <span class="token class-name">Random</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token function">phrases</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span>random<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token function">phrases</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -610,7 +671,7 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-13T20:57:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-13T21:13:10.694Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-14T13:11:13.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T13:17:05.328Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
