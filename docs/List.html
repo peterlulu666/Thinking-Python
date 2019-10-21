@@ -57,6 +57,10 @@
                 
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-github-embed/github-embed.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
@@ -88,6 +92,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="String.html" />
     
     
     <link rel="prev" href="While loop.html" />
@@ -197,6 +203,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -243,11 +262,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <html><head></head><body><h1 id="list">List</h1>
+<h2 id="book">Book</h2>
 <p>A list is a sequence of values. The first index is 0.</p>
 <p>List is mutable. We would change the element is the list. <code>list.append(value)</code> <code>list.pop(index)</code> <code>list.remove(value)</code>.</p>
 <p>Copying a list</p>
 <pre class="language-"><code class="lang-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 b <span class="token operator">=</span> a
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
 </code></pre>
 <blockquote>
 <p><strong>[info] List</strong></p>
@@ -260,14 +281,29 @@ b <span class="token operator">=</span> a
 b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> item <span class="token keyword">in</span> a<span class="token punctuation">:</span>
     b<span class="token punctuation">.</span>append<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
 </code></pre>
 <blockquote>
 <p><strong>[info] List</strong></p>
 <ul>
+<li>We would use <code>append()</code>.</li>
+<li>The list <code>a</code> and <code>b</code> is referencing to the different address of memory.</li>
+</ul>
+</blockquote>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> copy
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[info] List</strong></p>
+<ul>
+<li>We would import <code>copy</code> and use <code>deepcopy()</code>.</li>
 <li>The list <code>a</code> and <code>b</code> is referencing to the different address of memory.</li>
 </ul>
 </blockquote>
 <h2 id="programming">Programming</h2>
+<p>The Sentence.py file has been provided. I personally wrote my version of the Typing.py.</p>
 <p></p><p class="code-label">Typing.py</p><p></p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">import</span> time
 
@@ -659,10 +695,14 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
 
             
                 
-                <a href="While loop.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: While loop">
+                <a href="While loop.html" class="navigation navigation-prev " aria-label="Previous page: While loop">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="String.html" class="navigation navigation-next " aria-label="Next page: String">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -671,7 +711,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-14T13:11:13.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T13:17:05.328Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"next":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"f311d85c72f55eedbfe97d3cd82c12527e4b1e8b"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-21T21:29:13.793Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:23:24.883Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
