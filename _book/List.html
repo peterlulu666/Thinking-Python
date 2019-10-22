@@ -459,8 +459,8 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
 
     <span class="token keyword">return</span> errors
 </code></pre>
-<p></p><p class="code-label">Pig.py</p><p></p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+<p></p><p class="code-label">Pig.py</p>
+<pre class="language-"><code class="lang-py"><span class="token keyword">import</span> random
 <span class="token keyword">import</span> sys
 
 
@@ -477,12 +477,21 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
         totalNumber <span class="token operator">=</span> totalNumber <span class="token operator">+</span> number
         <span class="token comment"># Total points in all rounds</span>
         totalPoints <span class="token operator">=</span> totalPoints <span class="token operator">+</span> number
+        <span class="token keyword">if</span> number <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            totalPoints <span class="token operator">=</span> totalPoints <span class="token operator">*</span> <span class="token number">0</span>
+            totalNumber <span class="token operator">=</span> totalNumber <span class="token operator">*</span> <span class="token number">0</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;The round is over and you have lost all the points you accumulated in the round&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Points in this round: &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalNumber<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Your total is &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalPoints<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> totalNumber
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Points in this round: &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalNumber<span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Your total is &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>totalPoints<span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> totalNumber <span class="token operator">&gt;</span> <span class="token number">20</span><span class="token punctuation">:</span>
             <span class="token keyword">break</span>
         <span class="token keyword">if</span> totalPoints <span class="token operator">&gt;</span> <span class="token number">20</span><span class="token punctuation">:</span>
             <span class="token keyword">break</span>
+        <span class="token comment"># If the value on the die is 1,</span>
+        <span class="token comment"># then the round is over and the player has lost all the points they accumulated in the round.</span>
 
     <span class="token keyword">return</span> totalNumber
 
@@ -517,8 +526,7 @@ PHRASES <span class="token operator">=</span> <span class="token punctuation">[<
                 sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 
-main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><p></p>
 <p><br></p>
 <h2 id="java-programming">Java Programming</h2>
 <p></p><p class="code-label">Typing.java</p><p></p>
@@ -711,7 +719,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"next":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"f311d85c72f55eedbfe97d3cd82c12527e4b1e8b"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-21T21:29:13.793Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:23:24.883Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"List","level":"1.6","depth":1,"next":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"previous":{"title":"While loop","level":"1.5","depth":1,"path":"While loop.md","ref":"While loop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"9d95b04021a7c2d083491a186f7629293e834e58"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"List.md","mtime":"2019-10-22T00:21:16.196Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T00:35:17.107Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
