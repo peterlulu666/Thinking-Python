@@ -362,15 +362,15 @@ count <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token comment"># Initialize even_sum</span>
     even_sum <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token comment"># If the input is less than 2 digits long, or if all the digits have value 0,</span>
-    <span class="token comment"># the code is &#x200B;not valid</span>
+    <span class="token comment">#     # the code is &#x200B;not valid</span>
     <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token boolean">False</span>
     <span class="token keyword">if</span> upc_list<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token boolean">False</span>
-    <span class="token comment"># the number above is written from left to right,</span>
+    <span class="token comment"># The number above is written from left to right,</span>
     <span class="token comment"># but the algorithm goes right to left,</span>
-    <span class="token comment"># so we say 9 is at position 0, 8 is at position 1, etc</span>
-    <span class="token comment"># Reverse the upc_list</span>
+    <span class="token comment"># so we say 9 is at position 0, 8 is at position 1, etc.</span>
+    <span class="token comment"># Reverse the upc_list.</span>
     <span class="token comment"># upc_list = upc_list[::-1]</span>
     upc_list<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment"># Use a loop to find the UPC number sum result</span>
@@ -899,6 +899,291 @@ NUM_COORDINATES <span class="token operator">=</span> <span class="token number"
     turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
     turtle<span class="token punctuation">.</span>dot<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of kmeans_viz.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/kmeans_viz.py" target="_blank">kmeans_viz.py</a></div><p></p>
 <p><br></p>
+<h2 id="java-programming">Java Programming</h2>
+<h3 id="programming-1">Programming #1</h3>
+<p></p><pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token class-name">UPCNumber</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">//        int[] upc_list = new int[] {0, 7, 3, 8, 5, 4, 0, 0, 8, 0, 8, 9};</span>
+        <span class="token comment">// User would enter the pure digit upc number.</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Enter upc number &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Scanner</span> scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> upc_number <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        // Count the digits in integer. This would be the size of array.</span>
+<span class="token comment">//        int countDigit = String.valueOf(upc_number).length();</span>
+        <span class="token keyword">int</span> countDigit <span class="token operator">=</span> upc_number<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// String to array of integer.</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upc_list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>countDigit<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> upc_list<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Add integer to int array</span>
+            upc_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>upc_number<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+        <span class="token class-name">IsValidUPC</span> isValidUPC <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IsValidUPC</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">boolean</span> test_input <span class="token operator">=</span> isValidUPC<span class="token punctuation">.</span><span class="token function">is_valid_upc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of main.java" href="https://github.com/peterlulu666/ThinkingCode/blob/master/src/UPCNumber/main.java" target="_blank">main.java</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token class-name">UPCNumber</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IsValidUPC</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upcList<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> oddSum<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> evenSum<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> totalSum<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+
+
+    <span class="token keyword">public</span> <span class="token class-name">IsValidUPC</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upcList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>upcList <span class="token operator">=</span> upcList<span class="token punctuation">;</span>
+        <span class="token comment">// Initialize odd_sum</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>oddSum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">// Initialize even_sum</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>evenSum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">// Initialize totalSum</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>totalSum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">// Initialize count</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">is_valid_upc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// If the input is less than 2 digits long, or if all the digits have value 0,</span>
+        <span class="token comment">// the code is &#x200B;not valid</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>upcList<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> number <span class="token operator">:</span> upcList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> upcList<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// The number above is written from left to right,</span>
+        <span class="token comment">// but the algorithm goes right to left,</span>
+        <span class="token comment">// so we say 9 is at position 0, 8 is at position 1, etc.</span>
+        <span class="token comment">// Reverse the upc_list.</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> upcList<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> temp <span class="token operator">=</span> upcList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            upcList<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> upcList<span class="token punctuation">[</span>upcList<span class="token punctuation">.</span>length <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            upcList<span class="token punctuation">[</span>upcList<span class="token punctuation">.</span>length <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+<span class="token comment">//        // Reverse the upc_list.</span>
+<span class="token comment">//        int[] reversed_upc_list = new int[upcList.length];</span>
+<span class="token comment">//        int reversedIndex = upcList.length;</span>
+<span class="token comment">//        for (int i = 0; i &lt; upcList.length; i++) {</span>
+<span class="token comment">//            reversed_upc_list[reversedIndex - 1] = upcList[i];</span>
+<span class="token comment">//            reversedIndex = reversedIndex - 1;</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//</span>
+<span class="token comment">////        // This is a shallow copy. The change in reversed_upc_list would cause the change in upc_list.</span>
+<span class="token comment">////        upcList = reversed_upc_list;</span>
+<span class="token comment">//        // This is a deep copy. The change in reversed_upc_list would not cause the change in upc_list.</span>
+<span class="token comment">//        upcList = reversed_upc_list.clone();</span>
+
+        <span class="token comment">// Use a loop to find the UPC number sum result.</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> upcList<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                evenSum <span class="token operator">+=</span> upcList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                oddSum <span class="token operator">+=</span> <span class="token punctuation">(</span>upcList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        totalSum <span class="token operator">=</span> evenSum <span class="token operator">+</span> oddSum<span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> totalSum <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of IsValidUPC.java" href="https://github.com/peterlulu666/ThinkingCode/blob/master/src/UPCNumber/IsValidUPC.java" target="_blank">IsValidUPC.java</a></div><p></p>
+<p><br></p>
+<h3 id="programming-2">Programming #2</h3>
+<p></p><pre class="language-"><code class="lang-java"><span class="token keyword">package</span> MBTA<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Arrays</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">List</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> mbta <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token function">mbta</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * RED_LINE
+     *
+     * @return The list of valid stations
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;Ashmont&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Shawmut&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Fields Corner&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Savin Hill&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;JFK/UMass&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Andrew&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Broadway&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;South Station&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Downtown Crossing&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Park St&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Charles/MGH&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Kendall&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Central&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Harvard&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Porter&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Davis&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Alewife&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * is_valid_station
+     *
+     * @param station_name, a string
+     * @return boolean, True if station is in the red line, False otherwise
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">is_valid_station</span><span class="token punctuation">(</span><span class="token class-name">String</span> station_name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// List of string contains a station name</span>
+        <span class="token keyword">return</span> <span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>station_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        // Array of string contains a station name</span>
+<span class="token comment">//        for (int i = 0; i &lt; RED_LINE().length; i++) {</span>
+<span class="token comment">//            if (RED_LINE()[i].equals(station_name)) {</span>
+<span class="token comment">//                return true;</span>
+<span class="token comment">//            }</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//        return false;</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * get_direction
+     *
+     * @param start_station, strings
+     * @param end_station,   strings
+     * @return first stop or last stop on the red line.
+     * i.  If either station doesn&#x2019;t exist on the red line, return the string &#x200B;&quot;no destination found&quot;&#x200B;.
+     * ii. If both stations are the same, return &#x200B;&quot;no destination found&quot;
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">get_direction</span><span class="token punctuation">(</span><span class="token class-name">String</span> start_station<span class="token punctuation">,</span> <span class="token class-name">String</span> end_station<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>start_station<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;no destination found&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>start_station<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;both stations are the same&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>start_station<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;Alewife&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;Ashmont&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token comment">//        // Access the index of array element.</span>
+<span class="token comment">//        int start_station_index = 0;</span>
+<span class="token comment">//        for (int index = 0; index &lt; RED_LINE().length; index++) {</span>
+<span class="token comment">//            if (RED_LINE()[index].equals(start_station)) {</span>
+<span class="token comment">//                start_station_index = index;</span>
+<span class="token comment">//</span>
+<span class="token comment">//            }</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//</span>
+<span class="token comment">//        // Access the index of array element.</span>
+<span class="token comment">//        int end_station_index = 0;</span>
+<span class="token comment">//        for (int index = 0; index &lt; RED_LINE().length; index++) {</span>
+<span class="token comment">//            if (RED_LINE()[index].equals(end_station)) {</span>
+<span class="token comment">//                end_station_index = index;</span>
+<span class="token comment">//            }</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//</span>
+<span class="token comment">//</span>
+<span class="token comment">//        if (end_station_index - start_station_index &gt; 0) {</span>
+<span class="token comment">//            return &quot;Alewife&quot;;</span>
+<span class="token comment">//        } else if (end_station_index - start_station_index &lt; 0) {</span>
+<span class="token comment">//            return &quot;Ashmont&quot;;</span>
+<span class="token comment">//        } else if (start_station.equals(end_station)) {</span>
+<span class="token comment">//            return &quot;both stations are the same&quot;;</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//</span>
+<span class="token comment">//        for (int i = 0; i &lt; RED_LINE().length; i++) {</span>
+<span class="token comment">//            if ((!RED_LINE()[i].equals(start_station)) || (!RED_LINE()[i].equals(end_station))) {</span>
+<span class="token comment">//                return &quot;no destination found&quot;;</span>
+<span class="token comment">//            }</span>
+<span class="token comment">//        }</span>
+<span class="token comment">//        return &quot;&quot;;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * get_num_stops
+     *
+     * @param start_station, string
+     * @param end_station,   string
+     * @return number of stops from start to end, a positive integer.
+     * If either station doesn&#x2019;t exist on the red line, or if both stations are the same, return 0
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">get_num_stops</span><span class="token punctuation">(</span><span class="token class-name">String</span> start_station<span class="token punctuation">,</span> <span class="token class-name">String</span> end_station<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>start_station<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>start_station<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token function">RED_LINE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>start_station<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of mbta.java" href="https://github.com/peterlulu666/ThinkingCode/blob/master/src/MBTA/mbta.java" target="_blank">mbta.java</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-java"><span class="token keyword">package</span> MBTA<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> mbta_directions <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> mbta <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">mbta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Gather and validate input (user provides names of start/end stations)</span>
+        <span class="token comment">// Assumption: User is not transferring.</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Enter a starting T station \n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Scanner</span> scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> start_station <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>mbta<span class="token punctuation">.</span><span class="token function">is_valid_station</span><span class="token punctuation">(</span>start_station<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;I&apos;ve never heard of that station, please enter again \n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            start_station <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your destination T station \n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> end_station <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>mbta<span class="token punctuation">.</span><span class="token function">is_valid_station</span><span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;I&apos;ve never heard of that station, please enter again \n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            end_station <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// Figure out the direction to go on that line (final station</span>
+        <span class="token comment">// in the direction from start to end).</span>
+        <span class="token class-name">String</span> direction <span class="token operator">=</span> mbta<span class="token punctuation">.</span><span class="token function">get_direction</span><span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> num_stops <span class="token operator">=</span> mbta<span class="token punctuation">.</span><span class="token function">get_num_stops</span><span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Report the result, assuming we&quot;re actually going somewhere.</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>num_stops <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>start_station <span class="token operator">+</span>
+                    <span class="token string">&quot; to &quot;</span> <span class="token operator">+</span>
+                    end_station <span class="token operator">+</span>
+                    <span class="token string">&quot;? &quot;</span> <span class="token operator">+</span>
+                    <span class="token string">&quot;I can&apos;t help you with that one! &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Get on at &quot;</span> <span class="token operator">+</span>
+                    start_station <span class="token operator">+</span>
+                    <span class="token string">&quot; toward &quot;</span> <span class="token operator">+</span>
+                    direction <span class="token operator">+</span>
+                    <span class="token string">&quot;.\n&quot;</span> <span class="token operator">+</span>
+                    <span class="token string">&quot;Take the train for &quot;</span> <span class="token operator">+</span>
+                    num_stops <span class="token operator">+</span>
+                    <span class="token string">&quot; &quot;</span> <span class="token operator">+</span>
+                    <span class="token string">&quot;stops and arrive at &quot;</span> <span class="token operator">+</span>
+                    end_station <span class="token operator">+</span>
+                    <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of mbta_directions.java" href="https://github.com/peterlulu666/ThinkingCode/blob/master/src/MBTA/mbta_directions.java" target="_blank">mbta_directions.java</a></div><p></p>
+<p><br></p>
 <h2 id="useful-code">Useful code</h2>
 <p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">&quot;&quot;&quot; Function is_prime
@@ -946,6 +1231,7 @@ NUM_COORDINATES <span class="token operator">=</span> <span class="token number"
 
 
 main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of PrimeNumber.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/PrimeNumber.py" target="_blank">PrimeNumber.py</a></div><p></p>
+<p><br></p>
 </body></html>
                                 
                                 </section>
@@ -985,7 +1271,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String","level":"1.7","depth":1,"previous":{"title":"List","level":"1.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"6ef2799ef5c22e7ee12d2aa9c7853780394cb8a7"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2019-10-22T02:26:30.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T02:26:49.833Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"String","level":"1.7","depth":1,"previous":{"title":"List","level":"1.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2019-10-22T19:55:59.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T19:57:25.128Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
