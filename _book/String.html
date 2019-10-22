@@ -1,0 +1,1056 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>String · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-github-embed/github-embed.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="List.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="The Way of Programming.html">
+            
+                <a href="The Way of Programming.html">
+            
+                    
+                    The Way of Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Variable and data type.html">
+            
+                <a href="Variable and data type.html">
+            
+                    
+                    Variable and data type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="While loop.html">
+            
+                <a href="While loop.html">
+            
+                    
+                    While loop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="List.html">
+            
+                <a href="List.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="String.html">
+            
+                <a href="String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >String</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="string">String</h1>
+<h2 id="book">Book</h2>
+<p>A string is a sequence of character. We would user string to store letters, words, and sentence in Python.</p>
+<p>The string built-int function <code>len</code>.</p>
+<p>You would use a <code>for</code> and <code>while</code> loop to traverse the string and display each letter on a line by itself.</p>
+<h3 id="the-string-is-immutable">The string is immutable</h3>
+<p>We would use <code>+</code> concatenation, <code>*</code> multiple concatenation, <code>[]</code> index, and <code>[start:end]</code> slicing for string. These would not affect the string.</p>
+<p><code>s.upper</code> would not affect the string <code>s</code>. We would use the assignment operator to store the <code>s.upper()</code> like this <code>s = s.upper()</code>.</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">modify_string</span><span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    st <span class="token operator">=</span> st<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;w&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    my_string <span class="token operator">=</span> <span class="token string">&apos;ab&apos;</span>
+    modify_string<span class="token punctuation">(</span>my_string<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_string<span class="token punctuation">)</span>
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[info] String</strong></p>
+<ul>
+<li>The output would be <code>ab</code>.</li>
+<li>We would use the assignment operator to store <code>modify_string(my_string)</code> like this <code>my_string = modify_string(my_string)</code>.</li>
+</ul>
+</blockquote>
+<p>Comparatively, list is mutable.</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">modify_list</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    lst<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">]</span>
+    modify_list<span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[info] List</strong></p>
+<ul>
+<li>The output would be <code>[&apos;b&apos;, &apos;c&apos;]</code>.</li>
+</ul>
+</blockquote>
+<p>Integer is immutable.</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">modify_int</span><span class="token punctuation">(</span>intgr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    intgr <span class="token operator">=</span> intgr <span class="token operator">/</span> <span class="token number">10</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    intgr <span class="token operator">=</span> <span class="token number">20</span>
+    modify_int<span class="token punctuation">(</span>intgr<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>intgr<span class="token punctuation">)</span>
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[info] Integer</strong></p>
+<ul>
+<li>The output would be <code>20</code>.</li>
+<li>We would use the assignment operator to store <code>modify_int(intgr)</code> like this <code>intgr = modify_int(intgr)</code>.</li>
+</ul>
+</blockquote>
+<h3 id="the-search-function">The search function</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">find</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> letter<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    index <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> index <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> word<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">==</span> letter<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> index
+        index <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+</code></pre>
+<h3 id="the-counter-function">The counter function</h3>
+<pre class="language-"><code class="lang-python">word <span class="token operator">=</span> <span class="token string">&apos;banana&apos;</span>
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> letter <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> letter <span class="token operator">==</span> <span class="token string">&apos;a&apos;</span><span class="token punctuation">:</span>
+        count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="the-string-function">The string function</h3>
+<p><code>word.upper()</code> <code>mystr.lower()</code></p>
+<p>Returns an all-uppercase or all-lowercase version of the string.</p>
+<p><code>word.find(&apos;a&apos;)</code></p>
+<p>Returns the starting position of the first instance of the given string.</p>
+<p><code>in</code> returns True or False</p>
+<p><code>in_both</code> function</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">in_both</span><span class="token punctuation">(</span>word1<span class="token punctuation">,</span> word2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> letter <span class="token keyword">in</span> word1<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> letter <span class="token keyword">in</span> word2<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>letter<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="programming">Programming</h2>
+<p><iframe src="assets/Assignment4.pdf" style="width: 100%; height: 600px; border: 0px none;"></iframe></p>
+<h3 id="programming-1">Programming #1</h3>
+<p>The test_upc.py file has been provided. I personally wrote my version of the upc.py.</p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">is_valid_upc</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function is_valid_upc
+    Input: List of integers, a possible UPC number
+    Returns: Boolean, indicating whether the given input is valid or not
+    &quot;&quot;&quot;</span>
+    <span class="token comment"># Initialize odd_sum</span>
+    odd_sum <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># Initialize even_sum</span>
+    even_sum <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># If the input is less than 2 digits long, or if all the digits have value 0,</span>
+    <span class="token comment"># the code is &#x200B;not valid</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">if</span> upc_list<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>upc_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token comment"># the number above is written from left to right,</span>
+    <span class="token comment"># but the algorithm goes right to left,</span>
+    <span class="token comment"># so we say 9 is at position 0, 8 is at position 1, etc</span>
+    <span class="token comment"># Reverse the upc_list</span>
+    <span class="token comment"># upc_list = upc_list[::-1]</span>
+    upc_list<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># Use a loop to find the UPC number sum result</span>
+    upc_list_index <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> element <span class="token keyword">in</span> upc_list<span class="token punctuation">:</span>
+        <span class="token comment"># Digits in even positions, including zero: no change</span>
+        <span class="token keyword">if</span> upc_list_index <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            even_sum <span class="token operator">=</span> even_sum <span class="token operator">+</span> element
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># Digits in odd positions: *3</span>
+            odd_sum <span class="token operator">=</span> odd_sum <span class="token operator">+</span> element <span class="token operator">*</span> <span class="token number">3</span>
+        upc_list_index <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token comment"># Sum the results</span>
+    total_sum <span class="token operator">=</span> even_sum <span class="token operator">+</span> odd_sum
+
+    <span class="token comment"># # Use a loop to find the UPC number sum result</span>
+    <span class="token comment"># for upc_list_index in range(0, len(upc_list)):</span>
+    <span class="token comment">#     if upc_list_index % 2 == 0:</span>
+    <span class="token comment">#         even_sum += upc_list[upc_list_index]</span>
+    <span class="token comment">#     else:</span>
+    <span class="token comment">#         odd_sum += upc_list[upc_list_index] * 3</span>
+    <span class="token comment"># # Sum the results</span>
+    <span class="token comment"># total_sum = even_sum + odd_sum</span>
+
+    <span class="token comment"># # Use a loop to find the UPC number sum result</span>
+    <span class="token comment"># even_number_list = []</span>
+    <span class="token comment"># odd_number_list = []</span>
+    <span class="token comment"># # The for loop start at index 0 and the step size is 2. The list slicing syntax is [start:stop:step].</span>
+    <span class="token comment"># for element in upc_list[::2]:</span>
+    <span class="token comment">#     even_number_list.append(element)</span>
+    <span class="token comment"># # The for loop start at index 1 and the step size is 2. The list slicing syntax is [start:stop:step].</span>
+    <span class="token comment"># for element in upc_list[1::2]:</span>
+    <span class="token comment">#     odd_number_list.append(element * 3)</span>
+    <span class="token comment"># # Sum the results</span>
+    <span class="token comment"># total_sum = sum(even_number_list + odd_number_list)</span>
+
+    <span class="token comment"># # Use a loop to find the UPC number sum result</span>
+    <span class="token comment"># even_number_list = []</span>
+    <span class="token comment"># odd_number_list = []</span>
+    <span class="token comment"># # The for loop start at index 0 and the step size is 2. The list slicing syntax is (start:stop:step).</span>
+    <span class="token comment"># for upc_list_index in range(0, len(upc_list), 2):</span>
+    <span class="token comment">#     even_number_list.append(upc_list[upc_list_index])</span>
+    <span class="token comment"># # The for loop start at index 0 and the step size is 2. The list slicing syntax is (start:stop:step).</span>
+    <span class="token comment"># for upc_list_index in range(1, len(upc_list), 2):</span>
+    <span class="token comment">#     odd_number_list.append((upc_list[upc_list_index]) * 3)</span>
+    <span class="token comment"># # Sum the results</span>
+    <span class="token comment"># total_sum = sum(even_number_list + odd_number_list)</span>
+
+    <span class="token comment"># If it&#x2019;s a valid UPC number, this result is a multiple of 10</span>
+    <span class="token keyword">return</span> total_sum <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of upc.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/upc.py" target="_blank">upc.py</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">from</span> upc <span class="token keyword">import</span> is_valid_upc
+
+
+<span class="token keyword">def</span> <span class="token function">test_valid_upc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function test_valid_upc Input: Nothing Returns:
+    int, number of tests that failed. Does:
+    Invokes the is_valid_upc function on several different inputs,
+    expecting the function to return True.
+    Counts the number of times it returns False instead, chalking them up as fails.
+    &quot;&quot;&quot;</span>
+    num_failed <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># Test 1: 12-digit UPC, starts with 0</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 2: 12-digit UPC, starts/ends with non-zero</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 3: 13-digit UPC, starts/ends with non-zero test_</span>
+        <span class="token builtin">input</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+            num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token comment"># Test 4: 13-digit UPC, ends with zero</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 5: 2-digit UPC, still valid</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 6: 5-digit UPC, still valid</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> num_failed
+
+
+<span class="token keyword">def</span> <span class="token function">test_invalid_upc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function test_invalid_upc Input: Nothing Returns:
+    int, number of tests that failed. Does: Invokes the is_valid_upc function on several different inputs,
+    expecting the function to return False. Counts the number of times it returns True instead,
+    chalking them up as fails.
+    &quot;&quot;&quot;</span>
+    num_failed <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># Test 1: 12-digit UPC, mistyped a 6 as 5 from a valid one</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 2: 12-digit UPC, transposed two numbers from a valid one</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 3: 13-digit UPC, transposed two numbers from a valid one</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 4: 2 digits, but invalid</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 5: 1-digit UPC, invalid by default</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token comment"># Test 6: 0-digit UPC, invalid by default</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token comment"># Test 7: 12-digit UPC, but all zeroes, so invalid</span>
+    test_input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing&apos;</span><span class="token punctuation">,</span> test_input<span class="token punctuation">,</span> <span class="token string">&apos;is not valid...&apos;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> is_valid_upc<span class="token punctuation">(</span>test_input<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;SUCCESS!n&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;FAIL :(n&apos;</span><span class="token punctuation">)</span>
+        num_failed <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> num_failed
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing VALID upc numbers.n&apos;</span><span class="token punctuation">)</span>
+    num_fails <span class="token operator">=</span> test_valid_upc<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> num_fails <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;All valid tests passed!nn&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Sorry, something failed. Go back and fix pls.nn&apos;</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Testing INVALID upc numbers.n&apos;</span><span class="token punctuation">)</span>
+    num_fails <span class="token operator">=</span> test_invalid_upc<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> num_fails <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;All invalid tests passed!nn&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Sorry, something failed. Go back and fix pls.nn&apos;</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of test_upc.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/test_upc.py" target="_blank">test_upc.py</a></div><p></p>
+<p><br></p>
+<h3 id="programming-2">Programming #2</h3>
+<p>The mbta_directions.py file has been provided. I personally wrote my version of the mbta.py.</p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token comment"># The list of valid stations</span>
+RED_LINE <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Ashmont&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Shawmut&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Fields Corner&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Savin Hill&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;JFK/UMass&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Andrew&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Broadway&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;South Station&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;Downtown Crossing&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Park St&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Charles/MGH&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Kendall&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Central&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Harvard&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Porter&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Davis&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;Alewife&quot;</span><span class="token punctuation">]</span>
+
+<span class="token comment"># List of string to uppercase</span>
+<span class="token comment"># Accept upper/lowercase station names, no matter how the user chooses to capitalize</span>
+UPPERCASE_RED_LINE <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> station <span class="token keyword">in</span> RED_LINE<span class="token punctuation">:</span>
+    UPPERCASE_RED_LINE<span class="token punctuation">.</span>append<span class="token punctuation">(</span>station<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+RED_LINE <span class="token operator">=</span> UPPERCASE_RED_LINE
+
+
+<span class="token comment"># # We would use list comprehension for list of string to uppercase</span>
+<span class="token comment"># RED_LINE = [element.upper() for element in RED_LINE]</span>
+
+<span class="token comment"># # We would use map() for list of string to uppercase</span>
+<span class="token comment"># RED_LINE = list(map(lambda element: element.upper(), RED_LINE))</span>
+
+
+<span class="token keyword">def</span> <span class="token function">is_valid_station</span><span class="token punctuation">(</span>station_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function is_valid_station
+    Input: station name, a string.
+    Returns: boolean, True if station is in the red line, False otherwise
+    &quot;&quot;&quot;</span>
+    <span class="token comment"># Accept upper/lowercase station names, no matter how the user chooses to capitalize</span>
+    <span class="token comment"># String to uppercase</span>
+    station_name <span class="token operator">=</span> station_name<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> station_name <span class="token keyword">in</span> RED_LINE
+
+
+<span class="token keyword">def</span> <span class="token function">get_direction</span><span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function get_direction
+    Input: start and end stations, both strings
+    Returns: first stop or last stop on the red line.
+    i.  If either station doesn&#x2019;t exist on the red line, return the string &#x200B;&quot;no destination found&quot;&#x200B;.
+    ii. If both stations are the same, return &#x200B;&quot;no destination found&quot;
+    &quot;&quot;&quot;</span>
+    <span class="token comment"># Accept upper/lowercase station names, no matter how the user chooses to capitalize</span>
+    <span class="token comment"># String to uppercase</span>
+    start_station <span class="token operator">=</span> start_station<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    end_station <span class="token operator">=</span> end_station<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>start_station <span class="token keyword">not</span> <span class="token keyword">in</span> RED_LINE<span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span>end_station <span class="token keyword">not</span> <span class="token keyword">in</span> RED_LINE<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;no destination found&quot;</span>
+    <span class="token keyword">elif</span> start_station <span class="token operator">==</span> end_station<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;no destination found&quot;</span>
+    <span class="token keyword">elif</span> RED_LINE<span class="token punctuation">.</span>index<span class="token punctuation">(</span>end_station<span class="token punctuation">)</span> <span class="token operator">-</span> RED_LINE<span class="token punctuation">.</span>index<span class="token punctuation">(</span>start_station<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Alewife&quot;</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Ashmont&quot;</span>
+
+
+<span class="token keyword">def</span> <span class="token function">get_num_stops</span><span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function get_num_stops
+    Input: start and end stations, both strings
+    Returns: number of stops from start to end, a positive integer.
+    If either station doesn&#x2019;t exist on the red line, or if both stations are the same, return 0
+    &quot;&quot;&quot;</span>
+    <span class="token comment"># Accept upper/lowercase station names, no matter how the user chooses to capitalize</span>
+    <span class="token comment"># String to uppercase</span>
+    start_station <span class="token operator">=</span> start_station<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    end_station <span class="token operator">=</span> end_station<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>start_station <span class="token keyword">not</span> <span class="token keyword">in</span> RED_LINE<span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span>end_station <span class="token keyword">not</span> <span class="token keyword">in</span> RED_LINE<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token keyword">elif</span> start_station <span class="token operator">==</span> end_station<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>RED_LINE<span class="token punctuation">.</span>index<span class="token punctuation">(</span>end_station<span class="token punctuation">)</span> <span class="token operator">-</span> RED_LINE<span class="token punctuation">.</span>index<span class="token punctuation">(</span>start_station<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of mbta.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/mbta.py" target="_blank">mbta.py</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token triple-quoted-string string">&quot;&quot;&quot;
+CS5001
+Fall 2019
+HW 4
+Starter code -- This is a driver for getting
+directions out of the mbta module.
+
+This program makes several calls to functions you&quot;ll define
+in a module named mbta.py. Names, parameters, and return types
+can be inferred from the code below and are also described
+in the HW spec.
+
+Simplifications compared to actual T directions:
+* red line only, ashmont branch only
+* unforgiving station-name matches (case must match,
+and abbreviations too, as in Park St)
+
+Test cases for the whole program (you&quot;ll still need to test your
+individual functions as well):
+* Input: Shawmut to Fields Corner. Output: 1 stop, towards Alewife
+* Input: Kendall to Savin Hill. Output: 8 stops, towards Ashmont
+* Input: Alewife to Davis. Output: 1 stop, towards Ashmont
+* Input: Broadway to Charles/MGH. Output: 4 stops, towards Alewife
+* Input: Ashmont to Alewife. Output: 16 stops, towards Alewife
+* Input: Porter to Porter. Output: I can&apos;t help you
+
+&quot;&quot;&quot;</span>
+
+<span class="token keyword">import</span> mbta
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Gather and validate input (user provides names of start/end stations)</span>
+    <span class="token comment"># Assumption: User is not transferring</span>
+    start_station <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter a starting T station\n&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> mbta<span class="token punctuation">.</span>is_valid_station<span class="token punctuation">(</span>start_station<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        start_station <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;I&apos;ve never heard of that station, &quot;</span>
+                              <span class="token string">&quot;please enter again\n&quot;</span><span class="token punctuation">)</span>
+
+    end_station <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your destination T station\n&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> mbta<span class="token punctuation">.</span>is_valid_station<span class="token punctuation">(</span>end_station<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        end_station <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;I&apos;ve never heard of that station, &quot;</span>
+                            <span class="token string">&quot;please enter again\n&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Figure out the direction to go on that line (final station</span>
+    <span class="token comment"># in the direction from start to end)</span>
+    direction <span class="token operator">=</span> mbta<span class="token punctuation">.</span>get_direction<span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span>
+    num_stops <span class="token operator">=</span> mbta<span class="token punctuation">.</span>get_num_stops<span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> end_station<span class="token punctuation">)</span>
+
+    <span class="token comment"># Report the result, assuming we&quot;re actually going somewhere</span>
+    <span class="token keyword">if</span> num_stops <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>start_station<span class="token punctuation">,</span> <span class="token string">&quot; to &quot;</span><span class="token punctuation">,</span> end_station<span class="token punctuation">,</span> <span class="token string">&quot;? &quot;</span>
+                                                  <span class="token string">&quot;I can&apos;t help you with that one!&quot;</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Get on at &quot;</span><span class="token punctuation">,</span> start_station<span class="token punctuation">,</span> <span class="token string">&quot; toward &quot;</span><span class="token punctuation">,</span> direction<span class="token punctuation">,</span> <span class="token string">&quot;.\n&quot;</span>
+                                                                  <span class="token string">&quot;Take the train for &quot;</span><span class="token punctuation">,</span> num_stops<span class="token punctuation">,</span>
+              <span class="token string">&quot; stops and arrive at &quot;</span><span class="token punctuation">,</span>
+              end_station<span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of mbta_directions.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/mbta_directions.py" target="_blank">mbta_directions.py</a></div><p></p>
+<p><br></p>
+<h3 id="programming-3">Programming #3</h3>
+<p>The kmeans_viz.py file has been provided. I personally wrote my version of the kmeans_driver.py.</p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">import</span> math
+<span class="token keyword">import</span> random
+
+<span class="token keyword">import</span> kmeans_viz
+
+<span class="token comment"># Your initial dataset is this list of lists, containing 100 2-dimensional points</span>
+<span class="token comment"># Input data set</span>
+DATA <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">32.97</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.06</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">9.01</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">31.63</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">20.35</span><span class="token punctuation">,</span> <span class="token number">28.73</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.18</span><span class="token punctuation">,</span> <span class="token number">26.73</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">25.05</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">9.56</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.13</span><span class="token punctuation">,</span> <span class="token number">23.83</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">19.88</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">18.32</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">17.49</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">14.09</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">17.85</span><span class="token punctuation">,</span> <span class="token number">27.17</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">30.94</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">8.85</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4.81</span><span class="token punctuation">,</span> <span class="token number">42.22</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">4.59</span><span class="token punctuation">,</span> <span class="token number">11.18</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">9.96</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">35.64</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">24.72</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">11.39</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">14.44</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">43.31</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10.49</span><span class="token punctuation">,</span> <span class="token number">33.55</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4.24</span><span class="token punctuation">,</span> <span class="token number">31.54</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">27.12</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">17.34</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">25.24</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">12.61</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">20.26</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">4.7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">16.4</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">19.22</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">15.31</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">7.65</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">26.61</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">20.31</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">15.22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">30.33</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">29.3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">12.42</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">50.24</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.18</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">32.67</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">13.11</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">30.47</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">17.6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">23.25</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6.72</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">23.08</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">9.34</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">25.44</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6.09</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">37.91</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">4.55</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.14</span><span class="token punctuation">,</span> <span class="token number">34.76</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7.93</span><span class="token punctuation">,</span> <span class="token number">49.21</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">6.76</span><span class="token punctuation">,</span> <span class="token number">12.14</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">19.13</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2.24</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">12.65</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">7.23</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">11.25</span><span class="token punctuation">,</span> <span class="token number">25.98</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">9.03</span><span class="token punctuation">,</span> <span class="token number">22.77</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">9.29</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">26.2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">15.83</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.45</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">22.98</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">27.37</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">25.12</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">23.35</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">21.12</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">26.68</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">20.39</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">24.66</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">26.69</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">28.45</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">45.42</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">25.22</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">8.37</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.09</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">11.52</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">16.15</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">7.43</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">32.89</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">31.94</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">11.86</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">14.48</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">10.08</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.63</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">20.52</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">9.86</span><span class="token punctuation">,</span> <span class="token number">13.79</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">28.87</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">17.15</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">29.67</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">22.44</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">20.94</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">22.59</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">11.85</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">9.23</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">30.86</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.06</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3.8</span><span class="token punctuation">,</span> <span class="token number">22.54</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">5.84</span><span class="token punctuation">,</span> <span class="token number">21.71</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">7.01</span><span class="token punctuation">,</span> <span class="token number">23.65</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">22.5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">11.17</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">25.71</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">14.13</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">32.62</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">15.93</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">7.27</span><span class="token punctuation">,</span> <span class="token number">12.77</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">26.57</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">13.77</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">9.94</span><span class="token punctuation">,</span> <span class="token number">26.95</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">22.45</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">23.18</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">34.7</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5.62</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">29.53</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">22.88</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.7</span><span class="token punctuation">,</span> <span class="token number">31.02</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">22.52</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">10.02</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">23.36</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">14.54</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">19.44</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">12.94</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">23.36</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">45.27</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">19.8</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">8.95</span><span class="token punctuation">,</span> <span class="token number">13.63</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">47.16</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">14.46</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5.57</span><span class="token punctuation">,</span> <span class="token number">4.85</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">19.03</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">25.41</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">28.16</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">13.86</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">15.42</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">14.68</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">10.19</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">25.08</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.44</span><span class="token punctuation">,</span> <span class="token number">23.65</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">20.71</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">20.94</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">35.91</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">20.07</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">42.81</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.88</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.1</span><span class="token punctuation">,</span> <span class="token number">9.33</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">15.8</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">18.47</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.39</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">26.82</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">40.53</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">17.16</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">29.54</span><span class="token punctuation">,</span> <span class="token number">23.72</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7.8</span><span class="token punctuation">,</span> <span class="token number">23.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">22.19</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">27.76</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">23.48</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">25.01</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">21.2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">21.74</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">23.14</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">24.14</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">28.13</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">13.04</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">24.38</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6.79</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># data&#x200B;, a list of lists, each containing exactly</span>
+    <span class="token comment"># 2 floats to represent a 2-dimensional point. For this program, &#x200B;</span>
+    <span class="token comment"># data&#x200B; will contain 100 points. (This should be the same as input data.</span>
+    data <span class="token operator">=</span> DATA
+    <span class="token comment"># centroids&#x200B;, a list of lists, each containing exactly</span>
+    <span class="token comment"># 2 floats to represent a 2-dimensional point.</span>
+    <span class="token comment"># For this program, &#x200B;centroids&#x200B; will contain 4 points, because we&#x2019;re making 4 clusters.</span>
+    centroids <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># assignment&#x200B;, a list of lists, each containing exactly 2 integers to represent the indices of &#x200B;data</span>
+    <span class="token comment"># and &#x200B;centroids&#x200B;, respectively. For example, if assignment contains [[8, 0], [9, 3]], then we would</span>
+    <span class="token comment"># say that &#x200B;data[8]&#x200B;is assigned to &#x200B;centroid[0]&#x200B;, and &#x200B;data[9]&#x200B; is assigned to centroid[3]</span>
+    <span class="token comment"># colors&#x200B;, a list of strings that is the same length as &#x200B;centroids.</span>
+    assignment <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># colors&#x200B;, a list of strings that is the same length as &#x200B;centroids</span>
+    colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;purple&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">]</span>
+    <span class="token comment"># Set the number of clusters (i.e., the value of &#x200B;k&#x200B; in &#x200B;k-means clustering&#x200B;). We&#x2019;ll use 4</span>
+    number_of_clusters <span class="token operator">=</span> <span class="token number">4</span>
+    <span class="token comment"># Choose 4 random points to be your &#x201C;centroids.&#x201D; Our centroids will be chosen from our initial data.</span>
+    <span class="token comment"># Choose 4 points at random from the input data set.</span>
+    random_points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>number_of_clusters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        random_points<span class="token punctuation">.</span>append<span class="token punctuation">(</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># For each point in the data set, find the closest centroid.</span>
+    <span class="token comment"># Assign that point to the centroid.</span>
+    <span class="token comment"># Once all the points are assigned to a centroid, we have our clusters</span>
+    <span class="token comment"># The closest centroid</span>
+    position_one <span class="token operator">=</span> <span class="token number">0</span>
+    position_two <span class="token operator">=</span> <span class="token number">0</span>
+    minimum <span class="token operator">=</span> <span class="token number">100</span>
+
+    <span class="token keyword">for</span> point_A <span class="token keyword">in</span> data<span class="token punctuation">:</span>
+
+        <span class="token keyword">for</span> point_B <span class="token keyword">in</span> random_points<span class="token punctuation">:</span>
+            <span class="token comment"># The closest centroid for a given point is chosen using the Euclidean distance algorithm</span>
+            distance <span class="token operator">=</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>point_A<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> point_B<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>point_A<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> point_B<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>distance <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>distance <span class="token operator">&lt;</span> minimum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                minimum <span class="token operator">=</span> distance
+                position_one <span class="token operator">=</span> data<span class="token punctuation">.</span>index<span class="token punctuation">(</span>point_A<span class="token punctuation">)</span>
+                position_two <span class="token operator">=</span> random_points<span class="token punctuation">.</span>index<span class="token punctuation">(</span>point_B<span class="token punctuation">)</span>
+
+        centroids<span class="token punctuation">.</span>append<span class="token punctuation">(</span>position_one<span class="token punctuation">)</span>
+        centroids<span class="token punctuation">.</span>append<span class="token punctuation">(</span>position_two<span class="token punctuation">)</span>
+
+        assignment<span class="token punctuation">.</span>append<span class="token punctuation">(</span>centroids<span class="token punctuation">)</span>
+
+        minimum <span class="token operator">=</span> <span class="token number">100</span>
+        position_one <span class="token operator">=</span> <span class="token number">0</span>
+        position_two <span class="token operator">=</span> <span class="token number">0</span>
+        centroids <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># Invoke the functions we&#x2019;ve defined in &#x200B;kmeans_viz.py.</span>
+    <span class="token comment"># You need to invoke only two functions: draw_centroids&#x200B; &#x200B;and &#x200B;draw_assignment.</span>
+    kmeans_viz<span class="token punctuation">.</span>draw_centroids<span class="token punctuation">(</span>random_points<span class="token punctuation">,</span> colors<span class="token punctuation">)</span>
+    kmeans_viz<span class="token punctuation">.</span>draw_assignment<span class="token punctuation">(</span>random_points<span class="token punctuation">,</span> data<span class="token punctuation">,</span> assignment<span class="token punctuation">,</span> colors<span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of kmeans_driver.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/kmeans_driver.py" target="_blank">kmeans_driver.py</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">import</span> turtle
+
+NUM_COORDINATES <span class="token operator">=</span> <span class="token number">2</span>
+
+
+<span class="token keyword">def</span> <span class="token function">draw_centroids</span><span class="token punctuation">(</span>centroids<span class="token punctuation">,</span> colors<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function draw_centroids
+    Input: Centroids (a list of lists), and List of colors (strings)
+    Returns: nothing
+    Does: Iterates through the list of centroids. Each list in centroids is expected to be a 2-dimensional point. For example,
+    centroids might contain [[0, 0], [1, 2]], and this funciton will draw a point at coordinates (0, 0) and a point at
+    coordinates (1, 2).
+
+    Repeatedly calls helper funciton draw_centroid, once per point.
+
+    There should be as many centroids as there are colors (each centroid gets a unique color on the screen).
+
+    If the input format is not as expected, no error is reported,
+    it just stops drawing.
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>colors<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> NUM_COORDINATES<span class="token punctuation">:</span>
+            draw_centroid<span class="token punctuation">(</span>colors<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            turtle<span class="token punctuation">.</span>hideturtle<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">draw_assignment</span><span class="token punctuation">(</span>centroids<span class="token punctuation">,</span> data<span class="token punctuation">,</span> assignment<span class="token punctuation">,</span> colors<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function draw_assignment
+    Input: centroids (a list of lists), data (a list of lists),
+    assignment (a list of lists, organized by index),
+    and a list of colors (strings).
+    Returns: Nothing
+    Does: Uses the nested list assignment to find the indices of
+    each data point in data, and its corresponding centroid
+    in centroids. Once the correct point is found, we
+    draw it using the corresponding centroid&apos;s color.
+
+    For example, we expect assignment to have the format
+    [[0, 1], [1, 3], ...] indicating that data[@] maps to
+    centroids[1], and data[1] maps to centroids[1].
+    Therefore, we draw the point data[0] with color colors[1].
+    And we draw the point data[1] with the color colors[3].
+
+    There should be as many centroids as there are colors (each
+    cluster gets a unique color corresponding with its centroid).
+
+    If the input format is not as expected, no error is reported,
+    it just stops drawing.
+    &quot;&quot;&quot;</span>
+
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>colors<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    <span class="token keyword">for</span> lst <span class="token keyword">in</span> assignment<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span> <span class="token operator">&lt;</span> NUM_COORDINATES<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+
+        data_index <span class="token operator">=</span> lst<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        cent_index <span class="token operator">=</span> lst<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> data_index <span class="token operator">&gt;=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token keyword">or</span> cent_index <span class="token operator">&gt;=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+
+        draw_point<span class="token punctuation">(</span>colors<span class="token punctuation">[</span>cent_index<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span>data_index<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span>data_index<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">draw_centroid</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function draw_centroid
+    Input: a color (string), an x-coord (float) and a y-coord (float)
+    Returns: nothing
+    Does: Draws a cross-shape, of size 10, with center at the (x,y)
+    indicated.
+    &quot;&quot;&quot;</span>
+
+    turtle<span class="token punctuation">.</span>color<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>penup<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token operator">-</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">draw_centroid</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function draw_centroid
+    Input: a color (string), an x-coord (float) and a y-coord (float)
+    Returns: nothing
+    Does: Draws a cross-shape, of size 10, with center at the (x,y)
+    indicated.
+    &quot;&quot;&quot;</span>
+
+    turtle<span class="token punctuation">.</span>color<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>penup<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token operator">-</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>penup<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x <span class="token operator">-</span> <span class="token number">10</span><span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">draw_point</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function draw_point
+    Input: a color (string), an x-coord (float) and a y-coord (float)
+    Returns: nothing
+    Does: Draws a single point at the (x,y) indicated.
+    &quot;&quot;&quot;</span>
+
+    turtle<span class="token punctuation">.</span>color<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>penup<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    turtle<span class="token punctuation">.</span>dot<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of kmeans_viz.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/kmeans_viz.py" target="_blank">kmeans_viz.py</a></div><p></p>
+<p><br></p>
+<h2 id="useful-code">Useful code</h2>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function is_prime
+    Parameters: positive integer
+    Returns: boolean, True if prime, and
+    False otherwise (it has a factor &gt; 1)
+    &quot;&quot;&quot;</span>
+    factor <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token keyword">while</span> factor <span class="token operator">&lt;=</span> num <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> num <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        factor <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">are_coprime</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function are_coprime
+    Parameters: two positive integers, a and b
+    Returns: boolean, True if a and b are coprime, and
+    False otherwise (they have a factor in common)
+    &quot;&quot;&quot;</span>
+    factor <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token keyword">while</span> factor <span class="token operator">&lt;=</span> a<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> a <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">and</span> b <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        factor <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num1 <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter an integer\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    num2 <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter another integer\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_prime<span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;is PRIME TIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;is just a composite&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_prime<span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token string">&quot;is PRIME TIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token string">&quot;is just a composite&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> are_coprime<span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;and&quot;</span><span class="token punctuation">,</span> num2<span class="token punctuation">,</span> <span class="token string">&quot;are CO PRIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;and&quot;</span><span class="token punctuation">,</span> num2<span class="token punctuation">,</span> <span class="token string">&quot;are not coprime, they have a factor in common&quot;</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of PrimeNumber.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/PrimeNumber.py" target="_blank">PrimeNumber.py</a></div><p></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="List.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"String","level":"1.7","depth":1,"previous":{"title":"List","level":"1.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"6ef2799ef5c22e7ee12d2aa9c7853780394cb8a7"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2019-10-22T02:26:30.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T02:26:49.833Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
