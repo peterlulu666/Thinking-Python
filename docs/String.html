@@ -563,6 +563,7 @@ count <span class="token operator">=</span> <span class="token number">0</span>
 
 
 main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of test_upc.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/test_upc.py" target="_blank">test_upc.py</a></div><p></p>
+<p><br></p>
 <h3 id="programming-2">Programming #2</h3>
 <p></p><pre class="language-"><code class="lang-py"><span class="token comment"># The list of valid stations</span>
 RED_LINE <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Ashmont&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Shawmut&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Fields Corner&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Savin Hill&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;JFK/UMass&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Andrew&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Broadway&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;South Station&quot;</span><span class="token punctuation">,</span>
@@ -693,6 +694,7 @@ individual functions as well):
 
 
 main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of mbta_directions.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/mbta_directions.py" target="_blank">mbta_directions.py</a></div><p></p>
+<p><br></p>
 <h3 id="programming-3">Programming #3</h3>
 <p></p><pre class="language-"><code class="lang-py"><span class="token keyword">import</span> math
 <span class="token keyword">import</span> random
@@ -892,6 +894,54 @@ NUM_COORDINATES <span class="token operator">=</span> <span class="token number"
     turtle<span class="token punctuation">.</span>goto<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
     turtle<span class="token punctuation">.</span>pendown<span class="token punctuation">(</span><span class="token punctuation">)</span>
     turtle<span class="token punctuation">.</span>dot<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of kmeans_viz.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/kmeans_viz.py" target="_blank">kmeans_viz.py</a></div><p></p>
+<p><br></p>
+<h2 id="useful-code">Useful code</h2>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function is_prime
+    Parameters: positive integer
+    Returns: boolean, True if prime, and
+    False otherwise (it has a factor &gt; 1)
+    &quot;&quot;&quot;</span>
+    factor <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token keyword">while</span> factor <span class="token operator">&lt;=</span> num <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> num <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        factor <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">are_coprime</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; Function are_coprime
+    Parameters: two positive integers, a and b
+    Returns: boolean, True if a and b are coprime, and
+    False otherwise (they have a factor in common)
+    &quot;&quot;&quot;</span>
+    factor <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token keyword">while</span> factor <span class="token operator">&lt;=</span> a<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> a <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">and</span> b <span class="token operator">%</span> factor <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        factor <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num1 <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter an integer\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    num2 <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter another integer\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_prime<span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;is PRIME TIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;is just a composite&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> is_prime<span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token string">&quot;is PRIME TIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token string">&quot;is just a composite&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> are_coprime<span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;and&quot;</span><span class="token punctuation">,</span> num2<span class="token punctuation">,</span> <span class="token string">&quot;are CO PRIME!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> <span class="token string">&quot;and&quot;</span><span class="token punctuation">,</span> num2<span class="token punctuation">,</span> <span class="token string">&quot;are not coprime, they have a factor in common&quot;</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of PrimeNumber.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/PrimeNumber.py" target="_blank">PrimeNumber.py</a></div><p></p>
 </body></html>
                                 
                                 </section>
@@ -931,7 +981,7 @@ NUM_COORDINATES <span class="token operator">=</span> <span class="token number"
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String","level":"1.7","depth":1,"previous":{"title":"List","level":"1.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"f311d85c72f55eedbfe97d3cd82c12527e4b1e8b"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2019-10-21T21:50:15.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:23:24.883Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"String","level":"1.7","depth":1,"previous":{"title":"List","level":"1.6","depth":1,"path":"List.md","ref":"List.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"9d95b04021a7c2d083491a186f7629293e834e58"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"String.md","mtime":"2019-10-22T00:33:35.564Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T00:35:17.107Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
