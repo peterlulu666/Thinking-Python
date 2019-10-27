@@ -385,6 +385,198 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
 
 main<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
+<h2 id="programming">Programming</h2>
+<p><iframe src="assets/Assignment5.pdf" style="width: 100%; height: 600px; border: 0px none;"></iframe></p>
+<h3 id="programming-1">Programming #1</h3>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">import</span> hanoi_viz
+
+
+<span class="token keyword">def</span> <span class="token function">number_of_disks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    min_disk <span class="token operator">=</span> <span class="token number">1</span>
+    max_disk <span class="token operator">=</span> <span class="token number">8</span>
+    <span class="token comment"># prompts the user for the number of disks and kicks off the process</span>
+    number_of_disk <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;What is the number of disk (1-8)? \n&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># Prompt the user to give you the number of disks. Prompt them repeatedly until they give you a valid number</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># make sure that the user has provided an integer, not a float or a string or anything else</span>
+        <span class="token comment"># isdigit() checks whether the string consists of digits only</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> number_of_disk<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a number, please try again!&quot;</span><span class="token punctuation">)</span>
+            number_of_disk <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;What is the number of disk (1-8)? \n&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># The integer they give you must be between 1 and 8 (inclusive)</span>
+            <span class="token keyword">if</span> min_disk <span class="token operator">&lt;=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>number_of_disk<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> max_disk<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token builtin">int</span><span class="token punctuation">(</span>number_of_disk<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a number, please try again!&quot;</span><span class="token punctuation">)</span>
+                number_of_disk <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;What is the number of disk (1-8)? \n&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># A recursive function to move disks from one tower to another</span>
+<span class="token comment"># Define a recursive function that moves disks from one tower to another</span>
+<span class="token comment"># This function&#x2019;s name is &#x200B;move_tower</span>
+<span class="token comment"># In addition to calling itself, this function should call the &#x200B;move_disk&#x200B; function in the hanoi_viz&#x200B; &#x200B;module</span>
+<span class="token keyword">def</span> <span class="token function">move_tower</span><span class="token punctuation">(</span>n_disk<span class="token punctuation">,</span> source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> middle<span class="token punctuation">,</span> towers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> n_disk <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        hanoi_viz<span class="token punctuation">.</span>move_disk<span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> towers<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token comment"># To move &#x200B;n&#x200B; disks, you need to recursively move &#x200B;n-1&#x200B; disks and then move that last disk</span>
+        move_tower<span class="token punctuation">(</span>n_disk <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> source<span class="token punctuation">,</span> middle<span class="token punctuation">,</span> target<span class="token punctuation">,</span> towers<span class="token punctuation">)</span>
+        hanoi_viz<span class="token punctuation">.</span>move_disk<span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> towers<span class="token punctuation">)</span>
+        move_tower<span class="token punctuation">(</span>n_disk <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> middle<span class="token punctuation">,</span> target<span class="token punctuation">,</span> source<span class="token punctuation">,</span> towers<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Choose names for the towers. These can be anything you like,</span>
+    <span class="token comment"># but keep them short or the illustrations won&#x2019;t look right</span>
+    <span class="token comment"># we want to get both disks from A to B, and we use C as a helper</span>
+    source <span class="token operator">=</span> <span class="token string">&quot;A&quot;</span>
+    target <span class="token operator">=</span> <span class="token string">&quot;B&quot;</span>
+    middle <span class="token operator">=</span> <span class="token string">&quot;C&quot;</span>
+    number_of_disk <span class="token operator">=</span> number_of_disks<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># Call the given &#x200B;initialize_towers&#x200B; function before calling your own, recursive function</span>
+    towers <span class="token operator">=</span> hanoi_viz<span class="token punctuation">.</span>initialize_towers<span class="token punctuation">(</span>number_of_disk<span class="token punctuation">,</span> source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> middle<span class="token punctuation">)</span>
+    move_tower<span class="token punctuation">(</span>number_of_disk<span class="token punctuation">,</span> source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> middle<span class="token punctuation">,</span> towers<span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of hanoi.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/hanoi.py" target="_blank">hanoi.py</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-py">DISK <span class="token operator">=</span> <span class="token string">&quot;X&quot;</span>
+
+
+<span class="token keyword">def</span> <span class="token function">move_disk</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> towers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; function move_disk
+        parameters: name of source tower, name of target tower (strings), and
+                    the towers themselves, a dictionary with key (string)
+                    and value (list of strings to represent disks)
+        returns: nothing
+
+        does: modifies the given towers so that the source tower removes
+              one disk (replaces with empty string), and adds one disk
+              to the target tower. Calls print towers at the end so we
+              illustrate the result of doing the move.
+
+              About the input: towers is a dictionary. key = name of tower,
+              and value = list of pegs. For example, we might have
+              tower[&quot;A&quot;] is a list with [&quot;&quot;, &quot;X&quot;, &quot;X&quot;], to represent
+              that the tower with name A has two disks and one blank space.
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Moving disk from&quot;</span><span class="token punctuation">,</span> source<span class="token punctuation">,</span> <span class="token string">&quot;to&quot;</span><span class="token punctuation">,</span> target<span class="token punctuation">)</span>
+    towers<span class="token punctuation">[</span>source<span class="token punctuation">]</span><span class="token punctuation">.</span>remove<span class="token punctuation">(</span>DISK<span class="token punctuation">)</span>
+    towers<span class="token punctuation">[</span>source<span class="token punctuation">]</span><span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    towers<span class="token punctuation">[</span>target<span class="token punctuation">]</span><span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    towers<span class="token punctuation">[</span>target<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>DISK<span class="token punctuation">)</span>
+    print_towers<span class="token punctuation">(</span>towers<span class="token punctuation">,</span> source<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">print_towers</span><span class="token punctuation">(</span>towers<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&apos;&apos;&apos; function print_towers
+        parameters: towers, a dictionary with key (string) and value (list
+                    of strings to represent pegs), and source which is a string
+                    holding the name of one tower
+        returns: nothing
+
+        does: prints the current state of the towers. Names of towers are
+              printed acros the top, and then the pegs are printed to the
+              correct overall height.
+    &apos;&apos;&apos;</span>
+    <span class="token keyword">for</span> tower <span class="token keyword">in</span> towers<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>tower<span class="token punctuation">,</span> <span class="token string">&quot;\t&quot;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>towers<span class="token punctuation">[</span>source<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> tower <span class="token keyword">in</span> towers<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>towers<span class="token punctuation">[</span>tower<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;\t&quot;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">initialize_towers</span><span class="token punctuation">(</span>num_disks<span class="token punctuation">,</span> source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> middle<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot; function initialize_towers
+        parameters: initial height, plus names of source, target, middle towers
+                    (all strings)
+        returns: towers, a dictionary with key = name of tower and value
+                 = pegs on that tower (all strings)
+    &quot;&quot;&quot;</span>
+    towers <span class="token operator">=</span> <span class="token punctuation">{</span>source<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> middle<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_disks<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        towers<span class="token punctuation">[</span>source<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>DISK<span class="token punctuation">)</span>
+        towers<span class="token punctuation">[</span>target<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+        towers<span class="token punctuation">[</span>middle<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    print_towers<span class="token punctuation">(</span>towers<span class="token punctuation">,</span> source<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> towers</code></pre><div class="github-embed-caption"><a title="Show Full Source of hanoi_viz.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/hanoi_viz.py" target="_blank">hanoi_viz.py</a></div><p></p>
+<h2 id="useful-code">Useful code</h2>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">count_occurrences</span><span class="token punctuation">(</span>integer_list<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    Name: count_occurrences
+    Input: a list of integers, an item to look for
+    Returns: an integer, the number of times the item appears in the list
+    &quot;&quot;&quot;</span>
+
+    count <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>integer_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> integer_list<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">==</span> number<span class="token punctuation">:</span>
+            count <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> count
+
+
+<span class="token keyword">def</span> <span class="token function">count_occurrences_recursion</span><span class="token punctuation">(</span>lst<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Function count_occurrences
+    Params: list of ints, plus an int to look for
+    Returns: the number of items item appears in the list
+    Does: recursively counts the occurrences of item
+    &quot;&quot;&quot;</span>
+
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> lst<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> item<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> lst<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> item<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">+</span> count_occurrences<span class="token punctuation">(</span>lst<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> count_occurrences<span class="token punctuation">(</span>lst<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences_recursion<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences_recursion<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences_recursion<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>count_occurrences_recursion<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of count_occurrences_recursion.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/count_occurrences_recursion.py" target="_blank">count_occurrences_recursion.py</a></div><p></p>
+<p></p><pre class="language-"><code class="lang-py"><span class="token keyword">def</span> <span class="token function">rev</span><span class="token punctuation">(</span>number_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    reverse_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>number_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        reverse_list <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>number_list<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>number_list<span class="token punctuation">)</span> <span class="token operator">-</span> index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token comment"># reverse_list.append(number_list[(len(number_list) - index - 1)])</span>
+    <span class="token comment"># for index in range((len(number_list) - 1), -1, -1):</span>
+    <span class="token comment">#     reverse_list += [(number_list[index])]</span>
+    <span class="token comment">#     # reverse_list.append(number_list[index])</span>
+    <span class="token keyword">return</span> reverse_list
+
+
+<span class="token keyword">def</span> <span class="token function">rev_recursion</span><span class="token punctuation">(</span>number_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>number_list<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>number_list<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+</span> rev<span class="token punctuation">(</span>number_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    lst <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+    revlist <span class="token operator">=</span> rev<span class="token punctuation">(</span>lst<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>lst<span class="token punctuation">,</span> <span class="token string">&apos;in reverse is&apos;</span><span class="token punctuation">,</span> revlist<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot; \n&quot;</span><span class="token punctuation">)</span>
+    rev_list_recursion <span class="token operator">=</span> rev_recursion<span class="token punctuation">(</span>lst<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>lst<span class="token punctuation">,</span> <span class="token string">&apos;in reverse is&apos;</span><span class="token punctuation">,</span> rev_list_recursion<span class="token punctuation">)</span>
+
+
+main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><div class="github-embed-caption"><a title="Show Full Source of ListReverseOrder_recursion.py" href="https://github.com/peterlulu666/ThinkingPythonCode/blob/master/ListReverseOrder_recursion.py" target="_blank">ListReverseOrder_recursion.py</a></div><p></p>
 </body></html>
                                 
                                 </section>
@@ -424,7 +616,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Recursion","level":"1.8","depth":1,"previous":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"token":"6b330dea4ed810cb83870c9c2f1a762b9a51cf3c","urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"6b330dea4ed810cb83870c9c2f1a762b9a51cf3c"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Recursion.md","mtime":"2019-10-27T15:27:22.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-27T15:47:02.541Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Recursion","level":"1.8","depth":1,"previous":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"token":"33ec8c8dd36e19abc1d674a7869f5dfc434d1b57","urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"33ec8c8dd36e19abc1d674a7869f5dfc434d1b57"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Recursion.md","mtime":"2019-10-27T20:21:42.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-27T20:51:13.737Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
