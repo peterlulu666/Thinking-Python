@@ -93,6 +93,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="AssignmentFall2018.html" />
+    
     
     <link rel="prev" href="String.html" />
     
@@ -224,6 +226,38 @@
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="AssignmentFall2018.html">
+            
+                <a href="AssignmentFall2018.html">
+            
+                    
+                    Assignment Fall 2018
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="Assignment 1.html">
+            
+                <a href="Assignment 1.html">
+            
+                    
+                    Assignment 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -405,8 +439,9 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
             number_of_disk <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;What is the number of disk (1-8)? \n&quot;</span><span class="token punctuation">)</span>
         <span class="token keyword">else</span><span class="token punctuation">:</span>
             <span class="token comment"># The integer they give you must be between 1 and 8 (inclusive)</span>
-            <span class="token keyword">if</span> min_disk <span class="token operator">&lt;=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>number_of_disk<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> max_disk<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token builtin">int</span><span class="token punctuation">(</span>number_of_disk<span class="token punctuation">)</span>
+            number_of_disk <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>number_of_disk<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> min_disk <span class="token operator">&lt;=</span> number_of_disk <span class="token operator">&lt;=</span> max_disk<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> number_of_disk
             <span class="token keyword">else</span><span class="token punctuation">:</span>
                 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a number, please try again!&quot;</span><span class="token punctuation">)</span>
                 number_of_disk <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;What is the number of disk (1-8)? \n&quot;</span><span class="token punctuation">)</span>
@@ -604,10 +639,14 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
 
             
                 
-                <a href="String.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: String">
+                <a href="String.html" class="navigation navigation-prev " aria-label="Previous page: String">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="AssignmentFall2018.html" class="navigation navigation-next " aria-label="Next page: Assignment Fall 2018">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -616,7 +655,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Recursion","level":"1.8","depth":1,"previous":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"token":"33ec8c8dd36e19abc1d674a7869f5dfc434d1b57","urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"33ec8c8dd36e19abc1d674a7869f5dfc434d1b57"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Recursion.md","mtime":"2019-10-27T20:21:42.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-27T20:51:13.737Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Recursion","level":"1.8","depth":1,"next":{"title":"Assignment Fall 2018","level":"1.9","depth":1,"path":"AssignmentFall2018.md","ref":"AssignmentFall2018.md","articles":[{"title":"Assignment 1","level":"1.9.1","depth":2,"path":"Assignment 1.md","ref":"Assignment 1.md","articles":[]}]},"previous":{"title":"String","level":"1.7","depth":1,"path":"String.md","ref":"String.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"token":"bb84cb0435116e938ae1d0a8ff5b6f66f2773fa3","urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode","token":"bb84cb0435116e938ae1d0a8ff5b6f66f2773fa3"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Recursion.md","mtime":"2019-10-27T20:21:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-29T03:25:10.013Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
