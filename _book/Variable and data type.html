@@ -242,7 +242,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="AssignmentFall2018.html">
+        <li class="chapter " data-level="1.10" data-path="Classes and objects.html">
+            
+                <a href="Classes and objects.html">
+            
+                    
+                    Classes and objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="AssignmentFall2018.html">
             
                 <a href="AssignmentFall2018.html">
             
@@ -256,7 +269,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="Assignment 1.html">
+        <li class="chapter " data-level="1.11.1" data-path="Assignment 1.html">
             
                 <a href="Assignment 1.html">
             
@@ -343,12 +356,40 @@
     SECONDS_PER_HOUR <span class="token operator">=</span> <span class="token number">3600</span>
     SECONDS_PER_MINUTE <span class="token operator">=</span> <span class="token number">60</span>
     <span class="token comment"># Prompt the user for the number of kilometers, hours, and minutes</span>
-    kilometers <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many kilometers did you run?&quot;</span><span class="token punctuation">)</span>
-    kilometers <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>kilometers<span class="token punctuation">)</span>
-    hours <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many hours did it take you?&quot;</span><span class="token punctuation">)</span>
-    hours <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>hours<span class="token punctuation">)</span>
-    minutes <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many minutes&quot;</span><span class="token punctuation">)</span>
-    minutes <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>minutes<span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># Number of kilometers they ran, a floating-point number</span>
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token comment"># Thedistance is a float and is always greater than zero</span>
+                kilometers <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many kilometers did you run? \n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> kilometers <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a positive number, please try again!&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a floating-point number, please try again!&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment"># Number of hours, a whole number</span>
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            hours <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many hours did it take you? \n&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> hours<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a whole number, please try again!&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                hours <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>hours<span class="token punctuation">)</span>
+                <span class="token keyword">break</span>
+        <span class="token comment"># Number of minutes, a whole number</span>
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            minutes <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;How many minutes? \n&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> minutes<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Oops, that wasn&apos;t a whole number, please try again!&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                minutes <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>minutes<span class="token punctuation">)</span>
+                <span class="token keyword">break</span>
+        <span class="token comment"># Hours and minutes are both whole numbers,and either one may be zero, but the &#x200B;total&#x200B; time is never zero</span>
+        <span class="token keyword">if</span> hours <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">and</span> minutes <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;The &#x200B;total&#x200B; time can not be zero \n&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
     <span class="token comment"># Compute the total number of miles ran, rounded off to two decimal places</span>
     miles <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">0.621371</span> <span class="token operator">*</span> kilometers<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token comment"># Compute the minutes and seconds pace-per-mile (&#x200B;head&#x2019;s up!!!&#x200B; If you do some calculation and</span>
@@ -726,7 +767,7 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Variable and data type","level":"1.3","depth":1,"next":{"title":"Function","level":"1.4","depth":1,"path":"Function.md","ref":"Function.md","articles":[]},"previous":{"title":"The Way of Programming","level":"1.2","depth":1,"path":"The Way of Programming.md","ref":"The Way of Programming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Variable and data type.md","mtime":"2019-11-02T17:32:05.825Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-02T17:43:48.613Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variable and data type","level":"1.3","depth":1,"next":{"title":"Function","level":"1.4","depth":1,"path":"Function.md","ref":"Function.md","articles":[]},"previous":{"title":"The Way of Programming","level":"1.2","depth":1,"path":"The Way of Programming.md","ref":"The Way of Programming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","url-embed","embed-pdf","codeblock-label","github-embed","include-codeblock"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"codeblock-label":{},"splitter":{},"github-embed":{"showLink":true,"urls":[{"regex":"https://github.com/peterlulu666/ThinkingPythonCode"}]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"tomorrow_night_eighties","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"embed-pdf":{},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Variable and data type.md","mtime":"2019-11-02T17:32:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-03T22:13:11.285Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
